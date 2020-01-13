@@ -10,7 +10,7 @@ CATEGORY = (
 )
 
 class Product(models.Model):
-    p_name = models.CharField(max_lenght=100)
+    p_name = models.CharField(max_length=100)
     p_image = models.ImageField(upload_to='images/')
     size = models.CharField(max_length=50)
     qyt = models.PositiveIntegerField()
