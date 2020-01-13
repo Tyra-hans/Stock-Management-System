@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
-# Create your views here.
+from django.contrib.auth.decorators import login_required
+from .models import Product
+
+
+def products(request):
+    products = Product.objects.all()
+    
+    return render(request, 'products.html',{"products": products})
