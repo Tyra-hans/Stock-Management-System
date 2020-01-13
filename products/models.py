@@ -24,6 +24,13 @@ class Product(models.Model):
     def delete_product(self):
         self.delete()
 
+    @classmethod   
+    def update_supplier(cls,id,new_name):
+        cls.objects.filter(pk = id).update(p_name=new_name)
+        new_name_object = cls.objects.get(p_name = new_name)
+        new_name = new_name_object.name
+        return new_name
+
     def __str__(self):
         return f'{self.p_name}'
 

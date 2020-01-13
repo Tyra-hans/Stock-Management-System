@@ -17,6 +17,7 @@ class Purchase(models.Model):
     def delete_purchase(self):
         self.delete()
 
+
     def __str__(self):
         return f'{self.pu_name}'
 

@@ -13,6 +13,13 @@ class Client(models.Model):
     def delete_client(self):
         self.delete()
 
+    @classmethod   
+    def update_supplier(cls,id,new_name):
+        cls.objects.filter(pk = id).update(c_name=new_name)
+        new_name_object = cls.objects.get(c_name = new_name)
+        new_name = new_name_object.name
+        return new_name
+
     def __str__(self):
         return f'{self.c_name}'
 
