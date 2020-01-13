@@ -3,9 +3,9 @@ from products.models import *
 
 class Client(models.Model):
     c_name = models.CharField(max_length=100)
-    c_phone = models.IntegerField(max_length=14)
+    c_phone = models.IntegerField()
     date = models.DateTimeField(auto_now_add=True)
-    product = models.ForeignKey('Product', on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
 
     def save_client(self):
         self.save()

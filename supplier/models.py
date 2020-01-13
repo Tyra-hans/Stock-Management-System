@@ -5,7 +5,7 @@ class Supplier(models.Model):
     s_name = models.CharField(max_length=100)
     s_phone = models.CharField(max_length=14)
     date = models.DateTimeField(auto_now_add=True)
-    materials = models.ForeignKey('Material', on_delete=models.CASCADE)
+    materials = models.ForeignKey(Material, on_delete=models.CASCADE)
 
     def save_supplier(self):
         self.save()

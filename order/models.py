@@ -3,8 +3,8 @@ from client.models import Client
 from products.models import Product
 
 class Order(models.Model):
-    Client = models.ForeignKey('Client', on_delete=models.CASCADE)
-    product = models.ForeignKey('Product', on_delete=models.CASCADE)
+    Client = models.ForeignKey(Client, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
     qyt =models.FloatField()
     date = models.DateTimeField(auto_now_add=True)
     order_no = models.CharField(max_length=100)
