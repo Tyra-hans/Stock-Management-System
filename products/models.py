@@ -1,12 +1,12 @@
 from django.db import models
 
 CATEGORY = (
-    (categoryone,'categoryone'),
-    (categoryone,'categoryone'),
-    (categoryone,'categoryone'),
-    (categoryone,'categoryone'),
-    (categoryone,'categoryone'),
-    (categoryone,'categoryone')
+    ('N','without chillie'),
+    ('H',' hot chillie'),
+    ('M','mild chillie'),
+    ('SP','siri ya pilau'),
+    ('SM','siri ya mchuzi'),
+    ('SC','siri ya chai')
 )
 
 class Product(models.Model):
